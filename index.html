@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Merry Christmas</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <script src="https://kit.fontawesome.com/69b5654055.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+                integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+                crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+        <meta name="keywords" content="Christmas card, merry Christmas, Christmas">
+        <meta name="author" content="Piero Sabino">
+        <meta name="description" content="Merry Christmas">
+    </head>
+    <body>       
+        <div class="wrap" id="wrap">
+            <div class="card card--inner">
+                <div class="snow layer1 a"></div>
+                <div class="snow layer1"></div> 
+                <div class="snow layer2 a"></div>
+                <div class="snow layer2"></div>
+                <div class="snow layer3 a"></div>
+                <div class="snow layer3"></div>
+                <div class="container">
+                    <p>
+                        <img src="./img/star.svg" class="star"><br> 
+                        <img src="./img/mistletoe.svg" class="mistletoe">
+                        I
+                        <img src="./img/mistletoe.svg" class="mistletoe">
+                        <br/>
+                        <img src="./img/light.svg" class="light"> 
+                        wish
+                        <img src="./img/light.svg" class="light">
+                        <br/>
+                        <img src="./img/star_01.svg" class="star1">
+                        you a
+                        <img src="./img/star_01.svg" class="star1">
+                        <br/> 
+                        <img src="./img/christmas-ball.svg" class="ball">
+                        Merry
+                        <img src="./img/christmas-ball.svg" class="ball">
+                        <br/>
+                        <img src="./img/candle.svg" class="candle">
+                        Christmas
+                        <img src="./img/candle.svg" class="candle">
+                        <br/>
+                        <img src="./img/gift-box.svg" class="box" >
+                    </p>
+                </div>
+                <audio id="myMusic">
+                    <source src="./music/chrimasts.mp3" type="audio/mpeg">
+                  </audio>
+               
+            </div>
+            <div class="card card--front back" onclick="openCard();"></div>
+            <div class="card card--front" onclick="openCard();">
+              <h2>Merry Christmas<br>2022</h2>
+            </div>
+          </div>         
+          <button type="button" onclick="openCard();" id="buttonActiveties">Mở Thiệp</button>
+    </body>
+</html>
+
+<script>
+    function openCard() {
+        var button = document.getElementById('buttonActiveties');
+        var audio = document.getElementById("myMusic"); 
+       
+
+
+        
+        if(button.innerHTML == 'Mở Thiệp') {
+            audio.play();
+            $('.snow').show();
+
+           
+          button.innerHTML = 'Đóng';
+        } else {
+          button.innerHTML = 'Mở Thiệp';
+          audio.pause();
+            $('.snow').hide();
+        }
+        
+        var cards = document.querySelectorAll('.card');
+        for(var i = 0; i < cards.length; i++) {
+          cards[i].classList.toggle('open');
+        }
+
+
+       
+
+    }
+</script>
+
+<script>
+
+             
+   
+</script>
